@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,31 +8,39 @@
     android:orientation="vertical"
     tools:context="com.example.bipuldevashish.hikebot.MainActivity">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="28sp"
         android:textStyle="italic"
-        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:id="@+id/mTextView2"
         android:textColor="#424242"
         android:text="Touch to get the co-ordinates"
         />
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
         android:textSize="28sp"
         android:textColor="#212121"
         android:textStyle="italic"
         android:id="@+id/mTextView"
         />
-    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5374797131081714/2621161622">
+    </com.google.android.gms.ads.AdView>
 
 
-</LinearLayout>
+
+</RelativeLayout>
